@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ahare Bangali - Restaurant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome (for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: rgb(223, 235, 246);
+      padding-top: 70px;
+    }
+    .navbar-custom {
+      background-color: #4e7355 !important;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding: 10px 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .navbar-custom .navbar-brand {
+      color: #460721 !important;
+      font-weight: 600;
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .navbar-custom .nav-link {
+      color: #b6a52b !important;
+      font-weight: 500;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-right: 20px;
+      transition: all 0.3s ease;
+    }
+    .navbar-custom .nav-link:hover,
+    .navbar-custom .nav-link.active {
+      color: #1e3e69 !important;
+      background-color: rgba(240, 162, 162, 0.1);
+      border-radius: 5px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2f2f2f;
+      margin-bottom: 20px;
+    }
+
+    .contact-section {
+      background-color: #f5f5f5;
+      color: #2f2f2f;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #4e7355;
+    }
+
+    .btn-success {
+      background-color: #4e7355;
+      border-color: #4e7355;
+    }
+
+    .btn-success:hover {
+      background-color: #3c5b44;
+      border-color: #3c5b44;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand navbar-custom w-100 fixed-top shadow">
+  <a class="navbar-brand" href="#home">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2g5T8b_2c0IPdBr89zZttA1vnDRXAGaI_DQ&s" alt="Logo" height="30">
+    Ahare Bangali
+  </a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+    <li class="nav-item"><a class="nav-link" href="#contact-info">Contact Info</a></li>
+    <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+  </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-4 mb-3">Welcome to Ahare Bangali</h1>
+    <p class="lead mb-4">Authentic Bengali Cuisine Served with Love</p>
+    <a href="#menu" class="btn btn-warning btn-lg">Explore Our Menu</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center">About Us</h2>
+    <p class="text-center">At <strong>Ahare Bangali</strong>, we bring the flavors of Bengal to your plate.</p>
+  </div>
+</section>
+
+<!-- Menu Placeholder -->
+<section id="menu" class="py-5">
+  <div class="container text-center">
+    <h2 class="section-title">Our Menu</h2>
+    <div id="menu-container" class="row">
+      <!-- Inject via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Contact Info Section -->
+<section id="contact-info" class="contact-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Contact Information</h2>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <h5>Ahare Bangali</h5>
+        <p><strong>Address:</strong> 12, Kolkata Street, West Bengal, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> contact@aharebangali.com</p>
+
+        <h5 class="mt-4">Follow Us</h5>
+        <p>
+          <a href="https://www.facebook.com/aaharebengaliofficial/" target="_blank"><i class="fab fa-facebook fa-lg mx-2"></i></a>
+          <a href="https://www.instagram.com/aaharebengaliofficial/" target="_blank"><i class="fab fa-instagram fa-lg mx-2"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feedback Form Section -->
+<section id="feedback" class="contact-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Feedback Form</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="feedbackForm" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" class="form-control" id="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Your Feedback</label>
+            <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Alert Script -->
+<script>
+  document.getElementById("feedbackForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    try {
+      const res = await fetch("/feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        alert("Thank you! Your feedback has been submitted successfully.");
+        form.reset();
+      } else {
+        alert("Failed to submit feedback. Please try again.");
+      }
+    } catch (err) {
+      alert("Server error. Please try again later.");
+    }
+  });
+</script>
+
+
+<script src="menu.js"></script>
+</body>
+</html>
